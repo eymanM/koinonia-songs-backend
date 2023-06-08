@@ -9,6 +9,9 @@
 
 ### Setup
 You have to install globally Serverless framework, AWS CLI, Node JS.
+Configure AWS CLI with your credentials.
+You need to have database with this structure:
+![Database](postgres.png)
 
 Then ```npm install``` in root directory.
 
