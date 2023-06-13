@@ -15,7 +15,7 @@ app.get('/songsAmount', async (req, res) => {
 
 app.get('/song', async (req, res) => {
   await db.exec(async (client) => {
-    const result = await client.query('select * from koinonia.tekst where numer=$1 order by id', [req.query.songNo]);
+    const result = await client.query('select numer, tekst, copyr, chwyt from koinonia.tekst left join koinonia.chwyty on koinonia.tekst.id = koinonia.chwyty .id where numer = $1 order by tekst.id', [req.query.songNo]);
     console.log(result.rows);
     res.json(result.rows);
   });
