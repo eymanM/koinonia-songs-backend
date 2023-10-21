@@ -11,6 +11,7 @@ const config = {
   port: params.port,
   database: params.pathname.split('/')[1],
   idleTimeoutMillis: 0.001,
+  ssl: true
 };
 
 export default config;
